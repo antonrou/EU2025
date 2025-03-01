@@ -29,7 +29,17 @@ public class SecondFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.buttonSecond.setOnClickListener(v ->
+        binding.doneBalanceButton.setOnClickListener(v -> {
+            // Get balance text and convert to integer
+            String AddedAmntTxt = binding.amntAdd.getText().toString().trim();
+            int addedAmnt = 0;
+            addedAmnt = Integer.parseInt(AddedAmntTxt);
+
+            NavHostFragment.findNavController(SecondFragment.this)
+                    .navigate(R.id.action_SecondFragment_to_FirstFragment);
+        });
+
+        binding.cancelButton.setOnClickListener(v ->
                 NavHostFragment.findNavController(SecondFragment.this)
                         .navigate(R.id.action_SecondFragment_to_FirstFragment)
         );
