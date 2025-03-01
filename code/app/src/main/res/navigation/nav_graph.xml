@@ -3,9 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/BalanceFragment">
     app:startDestination="@id/LoginFragment">
 
+    <fragment
+        android:id="@+id/QrCodeFragment"
+        android:name="com.example.arcmobile.QRCodeFragment"
+        android:label="qrcode_fragment_label"
+        tools:layout="@layout/fragment_qrcode">
+
+        <action
+            android:id="@+id/action_QrCodeFragment_to_ReloadFragment"/>
+    </fragment>
     <fragment
         android:id="@+id/BalanceFragment"
         android:name="com.example.arcmobile.BalanceFragment"
