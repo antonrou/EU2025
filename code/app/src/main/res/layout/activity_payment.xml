@@ -1,30 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:gravity="center">
+    android:padding="16dp">
 
-    <!-- Balance Display -->
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="327dp"
+        android:layout_height="157dp"
+        app:srcCompat="@drawable/logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
     <TextView
         android:id="@+id/tvBalance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="144dp"
         android:text="Balance: $10.00"
-        android:textSize="18sp"
+        android:textSize="48sp"
         android:textStyle="bold"
-        android:layout_marginBottom="24dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView3" />
 
-    <!-- Pay Now Button -->
     <Button
         android:id="@+id/btnPay"
-        android:layout_width="wrap_content"
+        android:layout_width="121dp"
         android:layout_height="wrap_content"
-        android:text="Pay Now"
-        android:textSize="18sp"
-        android:padding="16dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="@color/purple_500"
-        android:textColor="@android:color/white" />
+        android:padding="16dp"
+        android:text="Pay Now"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBalance"
+        app:layout_constraintVertical_bias="0.374" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
