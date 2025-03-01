@@ -1,71 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="16dp"
-    >
-
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Profile"
-        android:textSize="24sp"
-    android:textStyle="bold"
-    android:layout_marginBottom="24dp"
-    android:gravity="center"
-    android:layout_gravity="center_horizontal"  />
+        android:padding="16dp">
 
-    <!-- Name Field -->
-    <EditText
-        android:id="@+id/etName"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:hint="Enter your name"
-    android:inputType="textPersonName" />
+        <!-- Logo at the Top -->
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="327dp"
+            android:layout_height="157dp"
+            app:srcCompat="@drawable/logo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
 
-    <!-- City Field -->
-    <EditText
-        android:id="@+id/etCity"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:hint="Enter your city"
-    android:inputType="text"
-    android:layout_marginTop="16dp" />
+        <!-- Profile Title -->
+        <TextView
+            android:id="@+id/tvProfileTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/imageView3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp" />
 
-    <!-- Province Field -->
-    <EditText
-        android:id="@+id/etProvince"
-        android:autofillHints=""
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:hint="Enter your province"
-    android:inputType="text"
-    android:layout_marginTop="16dp" />
+        <!-- Name Field -->
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter your name"
+            android:inputType="textPersonName"
+            app:layout_constraintTop_toBottomOf="@id/tvProfileTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
 
-    <!-- Age Group Spinner -->
-    <Spinner
-        android:id="@+id/spinnerAgeGroup"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="16dp" />
+        <!-- City Field -->
+        <EditText
+            android:id="@+id/etCity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter your city"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/etName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
 
-    <!-- Save Button -->
-    <Button
-        android:id="@+id/btnSave"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Save Profile"
-    android:layout_marginTop="24dp"
-    android:backgroundTint="@color/purple_500"
-    android:textColor="@android:color/white" />
+        <!-- Province Field -->
+        <EditText
+            android:id="@+id/etProvince"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter your province"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/etCity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
 
-</LinearLayout>
+        <!-- Age Group Spinner -->
+        <Spinner
+            android:id="@+id/spinnerAgeGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/etProvince"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Save Profile"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@id/spinnerAgeGroup"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
