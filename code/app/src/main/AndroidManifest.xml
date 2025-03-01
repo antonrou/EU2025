@@ -36,6 +36,22 @@
             android:exported="true"
             android:theme="@style/Theme.ArcMobile" />
 
+        <activity
+            android:name=".Profile"
+            android:exported="true"
+            android:theme="@style/Theme.ArcMobile" />
+        <activity
+            android:name=".Transaction"
+            android:exported="true"
+            android:theme="@style/Theme.ArcMobile" />
+        <activity
+            android:name=".CardHistoryActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ArcMobile" />
+
+
+
+
     </application>
 
 </manifest>

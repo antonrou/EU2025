@@ -6,24 +6,32 @@
     app:startDestination="@id/LoginFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.arcmobile.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        android:id="@+id/QrCodeFragment"
+        android:name="com.example.arcmobile.QRCodeFragment"
+        android:label="qrcode_fragment_label"
+        tools:layout="@layout/fragment_qrcode">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_QrCodeFragment_to_ReloadFragment"/>
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.arcmobile.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:id="@+id/BalanceFragment"
+        android:name="com.example.arcmobile.BalanceFragment"
+        android:label="balance_fragment_label"
+        tools:layout="@layout/fragment_reload">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_BalanceFragment_to_ReloadFragment"
+            app:destination="@id/ReloadFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ReloadFragment"
+        android:name="com.example.arcmobile.ReloadFragment"
+        android:label="reload_fragment_label">
+
+        <action
+            android:id="@+id/action_ReloadFragment_to_BalanceFragment"
+            app:destination="@id/BalanceFragment" />
     </fragment>
 
     <fragment
@@ -34,6 +42,7 @@
         <action
             android:id="@+id/action_LoginFragment_to_SignupFragment"
             app:destination="@id/SignupFragment" />
+
     </fragment>
 
     <fragment
@@ -44,5 +53,6 @@
             android:id="@+id/action_SignupFragment_to_LoginFragment"
             app:destination="@id/LoginFragment" />
     </fragment>
+
 
 </navigation>
