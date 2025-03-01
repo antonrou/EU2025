@@ -1,5 +1,6 @@
 package com.example.arcmobile;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -45,6 +46,8 @@ public class LoginFragment extends Fragment {
             } else {
                 // Perform login operation (placeholder)
                 Toast.makeText(getActivity(), "Login successful!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(LoginFragment.this, Home.class);
+                startActivity(intent);
             }
         });
 
