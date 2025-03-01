@@ -24,6 +24,18 @@
             </intent-filter>
         </activity>
 
+        <!-- OnBusActivity -->
+        <activity
+            android:name=".OnBusActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ArcMobile" />
+
+        <!-- PaymentActivity -->
+        <activity
+            android:name=".PaymentActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ArcMobile" />
+
     </application>
 
 </manifest>

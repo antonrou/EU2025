@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/BalanceFragment">
+    app:startDestination="@id/LoginFragment">
 
     <fragment
         android:id="@+id/BalanceFragment"
@@ -24,4 +25,24 @@
             android:id="@+id/action_ReloadFragment_to_BalanceFragment"
             app:destination="@id/BalanceFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.example.arcmobile.LoginFragment"
+        tools:layout="@layout/login">
+
+        <action
+            android:id="@+id/action_LoginFragment_to_SignupFragment"
+            app:destination="@id/SignupFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SignupFragment"
+        android:name="com.example.arcmobile.SignupFragment"
+        tools:layout="@layout/signup">
+        <action
+            android:id="@+id/action_SignupFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
+    </fragment>
+
 </navigation>
