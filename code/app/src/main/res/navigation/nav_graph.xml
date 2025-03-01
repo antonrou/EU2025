@@ -34,6 +34,7 @@
         <action
             android:id="@+id/action_LoginFragment_to_SignupFragment"
             app:destination="@id/SignupFragment" />
+
     </fragment>
 
     <fragment
@@ -44,5 +45,6 @@
             android:id="@+id/action_SignupFragment_to_LoginFragment"
             app:destination="@id/LoginFragment" />
     </fragment>
+
 
 </navigation>

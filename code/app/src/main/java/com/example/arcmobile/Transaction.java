@@ -1,6 +1,8 @@
 package com.example.arcmobile;
 
-public class Transaction {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Transaction extends AppCompatActivity {
     private String date;
     private String time;
     private String amount;
