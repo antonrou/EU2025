@@ -18,7 +18,7 @@ public class HomeActivity extends AppCompatActivity {
         Button checkBalanceButton = findViewById(R.id.CheckBalanceButton);
         Button profileButton = findViewById(R.id.ProfileButton);
         Button paymentButton = findViewById(R.id.PaymentButton);
-        Button cardHistoryButton = findViewById(R.id.button3);
+        Button cardHistoryButton = findViewById(R.id.CardHistoryButton);
         ImageView logoImage = findViewById(R.id.logo);
 
         // Handle "Check/Reload Balance" Button Click
@@ -40,6 +40,10 @@ public class HomeActivity extends AppCompatActivity {
         // Handle "Card History" Button Click (Navigates to CardHistoryActivity)
         cardHistoryButton.setOnClickListener(v -> {
             Intent intent = new Intent(HomeActivity.this, CardHistoryActivity.class);
+            startActivity(intent);
+        });
+        cardHistoryButton.setOnClickListener(v -> {
+            Intent intent = new Intent(HomeActivity.this, ReloadFragment.class);
             startActivity(intent);
         });
     }

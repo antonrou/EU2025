@@ -52,6 +52,14 @@
             android:name=".HomeActivity"
             android:exported="true"
             android:theme="@style/Theme.ArcMobile" />
+        <activity
+            android:name=".PaymentActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ArcMobile" />
+        <activity
+            android:name=".ReloadFragment"
+            android:exported="true"
+            android:theme="@style/Theme.ArcMobile" />
 
 
 
