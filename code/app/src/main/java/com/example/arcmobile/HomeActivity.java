@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.fragment.NavHostFragment;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -40,10 +42,6 @@ public class HomeActivity extends AppCompatActivity {
         // Handle "Card History" Button Click (Navigates to CardHistoryActivity)
         cardHistoryButton.setOnClickListener(v -> {
             Intent intent = new Intent(HomeActivity.this, CardHistoryActivity.class);
-            startActivity(intent);
-        });
-        cardHistoryButton.setOnClickListener(v -> {
-            Intent intent = new Intent(HomeActivity.this, ReloadFragment.class);
             startActivity(intent);
         });
     }

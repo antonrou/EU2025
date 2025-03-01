@@ -17,7 +17,7 @@ import androidx.navigation.fragment.NavHostFragment;
 public class LoginFragment extends Fragment {
 
     private EditText editTextEmail, editTextPassword;
-    private Button loginButton, signupButton;
+    private Button loginButton, signupButton, ;
 
     @Nullable
     @Override
