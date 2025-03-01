@@ -47,7 +47,7 @@ public class LoginFragment extends Fragment {
                 // Perform login operation (placeholder)
                 Toast.makeText(getActivity(), "Login successful!", Toast.LENGTH_SHORT).show();
                 // Navigate to ProfileActivity
-                Intent intent = new Intent(getActivity(), Profile.class);
+                Intent intent = new Intent(getActivity(), HomeActivity.class);
                 startActivity(intent);
             }
         });

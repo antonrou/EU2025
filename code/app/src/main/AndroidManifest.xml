@@ -48,6 +48,10 @@
             android:name=".CardHistoryActivity"
             android:exported="true"
             android:theme="@style/Theme.ArcMobile" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ArcMobile" />
 
 
 
