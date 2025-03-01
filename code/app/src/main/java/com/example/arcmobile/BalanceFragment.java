@@ -9,11 +9,11 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-import com.example.arcmobile.databinding.FragmentFirstBinding;
+import com.example.arcmobile.databinding.FragmentBalanceBinding;
 
-public class FirstFragment extends Fragment {
+public class BalanceFragment extends Fragment {
 
-    private FragmentFirstBinding binding;
+    private FragmentBalanceBinding binding;
 
     @Override
     public View onCreateView(
@@ -21,7 +21,7 @@ public class FirstFragment extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = FragmentFirstBinding.inflate(inflater, container, false);
+        binding = FragmentBalanceBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }
@@ -29,9 +29,15 @@ public class FirstFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            int addedAmnt = bundle.getInt("addedAmnt", 0); // Default value is 0
+            binding.balanceText.setText(String.valueOf(addedAmnt+10));
+        }
+
         binding.addBalanceButton.setOnClickListener(v ->
-                NavHostFragment.findNavController(FirstFragment.this)
-                        .navigate(R.id.action_FirstFragment_to_SecondFragment)
+                NavHostFragment.findNavController(BalanceFragment.this)
+                        .navigate(R.id.action_BalanceFragment_to_ReloadFragment)
         );
     }
 
